@@ -1,0 +1,24 @@
+<!-- Import Polymer -->
+<link rel="import" href="components/polymer/polymer.html">
+
+<dom-module id="dog-text">
+  <!--link rel="import" type="css" href="contact-card.css"-->  
+  <template>
+      <style>
+    span {
+      background-color: yellow;
+    }
+  </style>
+      <span>Foooooo</span>
+    <content></content>
+    <iron-icon icon="star" hidden$="{{!starred}}"></iron-icon>
+  </template>
+  <script>
+    Polymer({
+      is: 'dog-text',
+      properties: {
+        starred: Boolean
+      }
+    });
+  </script>
+</dom-module>
