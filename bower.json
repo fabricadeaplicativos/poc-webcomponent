@@ -1,0 +1,19 @@
+{
+  "name": "pocwebcomponent",
+  "version": "1.0.0",
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "gulp": "~3.9.0",
+    "webcomponentsjs": "~0.7.5"
+  }
+}
