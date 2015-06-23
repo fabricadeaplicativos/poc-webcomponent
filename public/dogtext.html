@@ -1,7 +1,11 @@
 <!-- Import Polymer -->
+<!--link rel="import" href="components/paper-input/paper-input.html"-->
+
 <link rel="import" href="components/polymer/polymer.html">
 
-<dom-module id="dog-text">
+<link rel="import" href="components/paper-input/paper-input.html">
+
+<polymer-element name="dog-text">
   <!--link rel="import" type="css" href="contact-card.css"-->  
   <template>
       <style>
@@ -9,16 +13,55 @@
       background-color: yellow;
     }
   </style>
-      <span>Foooooo</span>
+  <div>
+</div>
+
+<img src="img/dog.png" />
+<paper-input error-message="{{error_message}}" label="{{label}}"></paper-input>
     <content></content>
-    <iron-icon icon="star" hidden$="{{!starred}}"></iron-icon>
+
+    <!--iron-icon icon="star" hidden$="{{!starred}}"></iron-icon-->
+  <div>
+</div>
+
   </template>
   <script>
-    Polymer({
+  
+  /*Polymer('dog-text', {
+
+    publish: {
+      label: '',
+      floatingLabel: false,
+      disabled: {value: false, reflect: true},
+      value: '',
+      committedValue: ''
+    },
+    focus: function() {
+      this.$.input.focus();
+    },
+
+    valueChanged: function() {
+      this.$.decorator.updateLabelVisibility(this.value);
+    },
+
+    changeAction: function(e) {
+      // re-fire event that does not bubble across shadow roots
+      this.fire('change', null, this);
+    }
+
+  });*/
+
+
+    Polymer('dog-text', {
       is: 'dog-text',
+      publish: {
+        error_message: '',
+        label: ''
+      },
       properties: {
-        starred: Boolean
+        starred: Boolean,                
       }
     });
+
   </script>
-</dom-module>
+</polymer-element>

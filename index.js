@@ -5,6 +5,8 @@ var express = require('express'),
 
 app.set('port', (process.env.PORT || 5000))
 app.use(express.static(__dirname + '/public'))
+app.use('/components',  express.static(__dirname + '/bower_components'));
+
 
 app.get('/', function(request, response) {
   	response.writeHeader(200, {"Content-Type": "text/html"});
